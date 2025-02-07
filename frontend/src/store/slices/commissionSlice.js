@@ -24,7 +24,7 @@ const commissionSlice = createSlice({
 export const postCommissionProof=(data)=>async(dispatch)=>{
     dispatch(commissionSlice.actions.postCommissionProofRequest());
   try{
-    const response = await axios.post("http://localhost:5000/api/v1/commission/proof",data,{
+    const response = await axios.post("https://auctionbharat.onrender.com/api/v1/commission/proof",data,{
       withCredentials:true,
       headers:{"Content-Type":"multipart/form-data"},
     });
